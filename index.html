@@ -7,31 +7,76 @@ file_put_contents("status.txt", "lunas");
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Pembayaran Berhasil</title>
 
     <style>
 
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
         body{
-            font-family:Arial,sans-serif;
+            font-family:Arial, sans-serif;
+            min-height:100vh;
             display:flex;
             justify-content:center;
             align-items:center;
-            height:100vh;
             background:#f5f7f8;
-            zoom: 500%;
+            padding:20px;
         }
 
         .card{
+            width:100%;
+            max-width:500px;
             background:white;
-            padding:40px;
-            border-radius:15px;
+            padding:40px 30px;
+            border-radius:20px;
             text-align:center;
-            box-shadow:0 10px 20px rgba(0,0,0,.1);
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .icon{
+            font-size:70px;
+            margin-bottom:15px;
         }
 
         h2{
             color:#396B71;
+            font-size:32px;
+            margin-bottom:15px;
+        }
+
+        p{
+            color:#666;
+            font-size:18px;
+            line-height:1.6;
+        }
+
+        @media (max-width: 768px){
+
+            .card{
+                max-width:100%;
+                padding:35px 25px;
+            }
+
+            .icon{
+                font-size:80px;
+            }
+
+            h2{
+                font-size:36px;
+            }
+
+            p{
+                font-size:20px;
+            }
+
         }
 
     </style>
@@ -39,15 +84,17 @@ file_put_contents("status.txt", "lunas");
 </head>
 <body>
 
-<div class="card">
+    <div class="card">
 
-    <h2>✅ Pembayaran Berhasil</h2>
+        <div class="icon">✅</div>
 
-    <p>
-        Status pembayaran telah dikirim ke sistem.
-    </p>
+        <h2>Pembayaran Berhasil</h2>
 
-</div>
+        <p>
+            Status pembayaran telah dikirim ke sistem.
+        </p>
+
+    </div>
 
 </body>
 </html>
