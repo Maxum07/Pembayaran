@@ -14,7 +14,7 @@ for(let i=1;i<=totalPhotos;i++){
 
     card.innerHTML=`
 
-        <img src="img/photo${i}.jpg">
+        <img src="photo${i}.jpg">
 
         <p>Our Memory ${i} 💕</p>
 
