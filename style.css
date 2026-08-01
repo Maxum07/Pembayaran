@@ -1,0 +1,267 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Poppins,sans-serif;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#120813;
+
+    position:relative;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+    padding:20px;
+
+}
+
+/* Pink Glow */
+
+.bg-glow{
+
+    position:absolute;
+
+    width:min(90vw,700px);
+    height:min(90vw,700px);
+
+    background:radial-gradient(
+        circle,
+        rgba(255,60,170,.28),
+        transparent 70%
+    );
+
+    filter:blur(20px);
+
+}
+
+/* Stars */
+
+body::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+
+    radial-gradient(#ff5cab 1px,transparent 1px),
+    radial-gradient(#ff7cbc 1px,transparent 1px);
+
+    background-size:150px 150px;
+    background-position:20px 40px,90px 100px;
+
+    opacity:.3;
+}
+
+/* Card */
+
+.container{
+
+    z-index:10;
+
+    width:100%;
+    max-width:700px;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+/* Image */
+
+.girl{
+
+    width:clamp(120px,30vw,180px);
+
+    margin-bottom:25px;
+
+    filter:drop-shadow(0 0 25px #ff5eb7);
+
+}
+
+/* Title */
+
+h1{
+
+    font-size:70px;
+
+    line-height:1;
+
+    font-family:"Playfair Display",serif;
+
+    color:#ff5cab;
+
+    text-shadow:
+
+    0 0 20px rgba(255,92,171,.5);
+
+    margin-bottom:20px;
+}
+
+/* Subtitle */
+
+p{
+
+    color:#b8a9b7;
+
+    font-size:clamp(1rem,2.5vw,1.35rem);
+
+    margin-bottom:40px;
+
+    line-height:1.6;
+
+    padding:0 10px;
+
+}
+
+/* Button */
+
+.btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:linear-gradient(
+        180deg,
+        #ff78bf,
+        #ff3f95
+    );
+
+    padding:18px 40px;
+
+    border-radius:18px;
+
+    font-weight:600;
+
+    font-size:clamp(.9rem,2vw,1rem);
+
+    box-shadow:0 0 25px rgba(255,80,160,.6);
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 0 35px rgba(255,80,160,.9);
+}
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:48px;
+    }
+
+    p{
+
+        font-size:18px;
+    }
+
+    .girl{
+
+        width:130px;
+    }
+
+}
+
+.question{
+
+    color:#ff5cab;
+
+    margin:25px 0;
+
+}
+
+.buttons{
+
+    position:relative;
+
+    width:320px;
+
+    height:180px;
+
+    margin:auto;
+
+}
+
+.yes{
+
+    display:inline-flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:#44d67d;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:15px;
+
+    padding:16px 35px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:0 0 20px rgba(68,214,125,.4);
+
+}
+
+.yes:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 30px rgba(68,214,125,.7);
+
+}
+
+.no{
+
+    position:absolute;
+
+    right:0;
+
+    top:0;
+
+    background:#2d2430;
+
+    color:white;
+
+    border:none;
+
+    border-radius:15px;
+
+    padding:16px 35px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
