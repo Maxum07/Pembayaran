@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistem Deteksi Helm</title>
+
+    <meta http-equiv="refresh"
+          content="0;url=https://script.google.com/macros/s/AKfycbyo1JcW-xYrOy0zoJaS_Vi-jdgjUw8OJVWKL0qGR-jHP2jN-oPF7E593l2SDJ-twfZKJQ/exec">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .loader {
+            width: 40px;
+            height: 40px;
+            margin: 20px auto;
+            border: 4px solid #cbd5e1;
+            border-top-color: #2563eb;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        a {
+            color: #2563eb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Sistem Deteksi Helm</h2>
+
+        <div class="loader"></div>
+
+        <p>Menghubungkan ke sistem deteksi helm...</p>
+
+        <p>
+            Jika tidak dialihkan otomatis,
+            <a id="manualLink" href="#">klik di sini</a>.
+        </p>
+    </div>
+
+    <script>
+        const SCRIPT_URL =
+            "https://script.google.com/macros/s/ID_DEPLOYMENT_KAMU/exec";
+
+        document.getElementById("manualLink").href = SCRIPT_URL;
+
+        window.location.replace(SCRIPT_URL);
+    </script>
+
+</body>
+</html>
